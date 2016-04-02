@@ -13,6 +13,9 @@
 		<div class="logo">
 			<?php tich_menu('top-menu') ?>
 			<?php tich_header(); ?>
-			<?php tich_menu('primary-menu') ?>
+			<?php //tich_menu('primary-menu') ?>
+			<div class="nav-menu">
+				<?php suppa_implement(1); ?>
+			</div>
 		</div>
 

@@ -17,11 +17,15 @@
 				</div>
 				<div id="footer-sidebar3">
 					<?php
-						if(is_active_sidebar('footer-sidebar-3')){
-							dynamic_sidebar('footer-sidebar-3');
+						global $tp_options;
+						if(isset($tp_options['editor-text'])){
+							echo $tp_options['editor-text'];
 						}
 					?>
 				</div>
+
+					
+				
 			</div>
 
 		</footer>

@@ -342,6 +342,12 @@ blockquote.right {
         list-style: none;
         padding: 0;
 }
+.sidebar .widget_search input{
+    padding: 5px;
+}
+.pagination-post{
+    text-align: center;
+}
 /* CSS chung cho toàn bộ widget */
 .widget {
         background: #f7f7f7;
@@ -372,7 +378,26 @@ blockquote.right {
 }
 
 /* Footer custom */
-footer #footer-sidebar3 aside.widget{
+footer #footer-sidebar3{
+    padding-top: 15px;
+    padding-left: 20px;
     background: #e3e3e3;
     border-radius: 5px;
+    min-height: 100px;
+}
+
+.fixed-top-nav{ z-index: 99999999; position: fixed; left: 0; top: 0; width: 90%; margin: 0 50px;} /* this make our menu fixed top */
+
+
+/**
+-------RESPONSIVE-------- 
+**/
+
+@media all and (max-width: 720px) {
+   .main-content {
+        float: none;
+    }
+    #container {
+        width: 720px;
+    }
 }

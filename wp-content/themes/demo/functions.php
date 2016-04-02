@@ -152,10 +152,50 @@
 				<?php if(get_next_posts_link()) : ?>
 					<div class="pre"><?php next_posts_link(__('Next', 'tich')); ?></div>
 				<?php endif; ?>
-				<?php global $numpages; ?>
-				<?php echo '(Page '.$numpages.')'; ?>
+				<!-- <?php the_posts_pagination( array(
+				    //'mid_size' => 3,
+				    'prev_text' => __( '<<', 'tich' ),
+				    'next_text' => __( '>>', 'tich' ),
+				    'screen_reader_text' => __( ' ', 'tich' ),
+				) ); ?> -->
+
 			</nav>
 			<?php
+		}
+	}
+
+	if(!function_exists('tich_custom_pagination')){
+		function tich_custom_pagination() {
+		    global $wp_query;
+		    $big = 999999999;
+		    $pages = paginate_links(array(
+		        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+		        'format' => '?page=%#%',
+		        'current' => max(1, get_query_var('paged')),
+		        'total' => $wp_query->max_num_pages,
+		        'prev_next' => false,
+		        'type' => 'array',
+		        'prev_next' => TRUE,
+		        'prev_text' => '&larr; Previous',
+		        'next_text' => 'Next &rarr;',
+		            ));
+		    if (is_array($pages)) {
+		    	//var_dump($pages);
+		        $current_page = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+		        echo '<ul class="pagination">';
+		        foreach ($pages as $i => $page) {
+		            if ($current_page == 1 && $i == 0) {
+		                echo "<li class='active'>$page</li>";
+		            } else {
+		                if ($current_page != 1 && $current_page == $i) {
+		                    echo "<li class='active'>$page</li>";
+		                } else {
+		                    echo "<li>$page</li>";
+		                }
+		            }
+		        }
+		        echo '</ul>';
+		    }
 		}
 	}
 
@@ -259,12 +299,22 @@
 @ sử dụng hook wp_enqueue_scripts() để hiển thị nó ra ngoài front-end
 **/
 	function tich_styles() {
-	  /*
-	   * Hàm get_stylesheet_uri() sẽ trả về giá trị dẫn đến file style.css của theme
-	   * Nếu sử dụng child theme, thì file style.css này vẫn load ra từ theme mẹ
-	   */
-	  wp_register_style( 'main-style', get_template_directory_uri() . '/style.css', 'all' );
-	  wp_enqueue_style( 'main-style' );
+		/* Chèn file JS của Jquery
+		*/
+		wp_register_script( 'jquery-js', get_template_directory_uri() . '/js/jquery-1.12.2.min.js', array('jquery') );
+		wp_enqueue_script( 'jquery-js' );
+
+	  
+	    /*
+		* Chèn các file CSS của bootstrap
+		*/
+		wp_register_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', 'all' );
+		wp_enqueue_style( 'bootstrap-css' );
+		/*
+		* Chèn file JS của bootstrap
+		*/
+		wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery') );
+		wp_enqueue_script( 'bootstrap-js' );
 
 	  /*
 		* Chèn các file CSS của SuperFish Menu
@@ -277,6 +327,13 @@
 		*/
 		wp_register_script( 'superfish-js', get_template_directory_uri() . '/js/superfish.js', array('jquery') );
 		wp_enqueue_script( 'superfish-js' );
+
+		/*
+	   * Hàm get_stylesheet_uri() sẽ trả về giá trị dẫn đến file style.css của theme
+	   * Nếu sử dụng child theme, thì file style.css này vẫn load ra từ theme mẹ
+	   */
+	  wp_register_style( 'main-style', get_template_directory_uri() . '/style.css', 'all' );
+	  wp_enqueue_style( 'main-style' );
 		 
 		/*
 		* Chèn file JS custom.js
@@ -301,7 +358,7 @@
 				'before_title' => '<h3 class="widget-title">',
 				'after_title' => '</h3>',
 				) );
-				register_sidebar( array(
+			register_sidebar( array(
 				'name' => 'Footer Sidebar 2',
 				'id' => 'footer-sidebar-2',
 				'description' => 'Appears in the footer area',
@@ -310,16 +367,7 @@
 				'before_title' => '<h3 class="widget-title">',
 				'after_title' => '</h3>',
 				) );
-				register_sidebar( array(
-				'name' => 'Footer Sidebar 3',
-				'id' => 'footer-sidebar-3',
-				'description' => 'Appears in the footer area',
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-				'after_widget' => '</aside>',
-				'before_title' => '<h3 class="widget-title">',
-				'after_title' => '</h3>',
-				) 
-			);
+			
 		}
 		add_action('widgets_init', 'tich_footer');
 	}

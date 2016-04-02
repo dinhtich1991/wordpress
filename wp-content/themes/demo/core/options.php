@@ -169,6 +169,7 @@
 				        'id' => 'typo-main',
 				        'type' => 'typography',
 				        'title' => 'Main Typography',
+				        'google'      => true,
 				        'output' => array( '.entry-content' ),
 				        'text-transform' => true,
 				        'default' => array(
@@ -192,7 +193,107 @@
 				    ),
 			    )
 			); // end section
-					 
+
+			// Home Section
+		    $this->sections[] = array(
+		        'title'  => __( 'Footer', 'tich' ),
+		        'desc'   => __( 'Settings for footer on this theme.', 'tich' ),
+		        'icon'   => 'el-chevron-down',
+		        'fields' => array(
+				    // Mỗi array là một field
+				    array(
+				        'id'       => 'editor-text',
+				        'type'     => 'editor',
+				        'title'    => __( 'Description', 'tich' ),
+				        'compiler' => 'bool', // Trả về giá trị kiểu true/false (boolean)
+				        'desc'     => __( 'Text show in footer', 'tich' ),
+				        'default' => 'Copyright',
+				    ),
+				 
+				)
+		    ); // end section
+
+		     // Slider Section
+		    $this->sections[] = array(
+		        'title'  => __( 'Slider', 'tich' ),
+		        'desc'   => __( 'All of settings for slider on this theme.', 'tich' ),
+		        'icon'   => 'el-icon-home',
+		        'fields'     => array(
+
+		            array(
+		                'id'            => 'opt-slider-label',
+		                'type'          => 'slider',
+		                'title'         => __( 'Slider Example 1', 'tich' ),
+		                'subtitle'      => __( 'This slider displays the value as a label.', 'tich' ),
+		                'desc'          => __( 'Slider description. Min: 1, max: 500, step: 1, default value: 250', 'tich' ),
+		                'default'       => 250,
+		                'min'           => 1,
+		                'step'          => 1,
+		                'max'           => 500,
+		                'display_value' => 'label'
+		            ),
+		            array(
+		                'id'            => 'opt-slider-text',
+		                'type'          => 'slider',
+		                'title'         => __( 'Slider Example 2 with Steps (5)', 'tich' ),
+		                'subtitle'      => __( 'This example displays the value in a text box', 'tich' ),
+		                'desc'          => __( 'Slider description. Min: 0, max: 300, step: 5, default value: 75', 'tich' ),
+		                'default'       => 75,
+		                'min'           => 0,
+		                'step'          => 5,
+		                'max'           => 300,
+		                'display_value' => 'text'
+		            ),
+		            array(
+		                'id'            => 'opt-slider-select',
+		                'type'          => 'slider',
+		                'title'         => __( 'Slider Example 3 with two sliders', 'tich' ),
+		                'subtitle'      => __( 'This example displays the values in select boxes', 'tich' ),
+		                'desc'          => __( 'Slider description. Min: 0, max: 500, step: 5, slider 1 default value: 100, slider 2 default value: 300', 'tich' ),
+		                'default'       => array(
+		                    1 => 100,
+		                    2 => 300,
+		                ),
+		                'min'           => 0,
+		                'step'          => 5,
+		                'max'           => '500',
+		                'display_value' => 'select',
+		                'handles'       => 2,
+		            ),
+		            array(
+		                'id'            => 'opt-slider-float',
+		                'type'          => 'slider',
+		                'title'         => __( 'Slider Example 4 with float values', 'tich' ),
+		                'subtitle'      => __( 'This example displays float values', 'tich' ),
+		                'desc'          => __( 'Slider description. Min: 0, max: 1, step: .1, default value: .5', 'tich' ),
+		                'default'       => .5,
+		                'min'           => 0,
+		                'step'          => .1,
+		                'max'           => 1,
+		                'resolution'    => 0.1,
+		                'display_value' => 'text'
+		            ),
+
+		        ),
+				
+		    ); // end section
+
+		     // Slider Section
+		    $this->sections[] = array(
+		        'title'  => __( 'Upload Slider', 'tich' ),
+		        'desc'   => __( 'All of settings for slider on this theme.', 'tich' ),
+		        'icon'   => 'el-icon-home',
+		        'fields' => array(
+				    array(
+				    	'title' => 'Home Slider',
+				    	'id' => 'home-slider',
+				    	'type' => 'slides',
+				    ),
+				),
+				
+		    ); // end section
+
+			
 		}
 
 	}
