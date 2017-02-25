@@ -1,36 +1,37 @@
-# Translation of Twenty Sixteen in Vietnamese
-# This file is distributed under the same license as the Twenty Sixteen package.
+# Translation of Themes - Twenty Sixteen in Vietnamese
+# This file is distributed under the same license as the Themes - Twenty Sixteen package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-10-29 01:00:18+0000\n"
+"PO-Revision-Date: 2016-12-05 01:43:13+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/1.0-alpha-1100\n"
-"Project-Id-Version: Twenty Sixteen\n"
-
-#. Description of the plugin/theme
-msgid "Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere."
-msgstr ""
+"X-Generator: GlotPress/2.3.0-alpha\n"
+"Language: vi_VN\n"
+"Project-Id-Version: Themes - Twenty Sixteen\n"
 
 #. Theme Name of the plugin/theme
 msgid "Twenty Sixteen"
-msgstr ""
+msgstr "2016"
+
+#. Description of the plugin/theme
+msgid "Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere."
+msgstr "Twenty Sixteen là một giao diện hiện đại dựa trên một cách bố cục trang web rất phổ biển của Wordpress - phần header ở đầu trang với tùy chọn sidebar bên phải rất phù hợp với các blog cá nhân và trang web. Giao diện này cho phép bạn tùy chỉnh màu sắc của trang web với những set màu được tùy chỉnh sẵn, nó cũng có một hệ thống grid hài hòa và linh hoạt được tối ưu cho các thiết bị di động, và được chăm chút hoàn hảo đến từng chi tiết. Twenty Sixteen sẽ giúp bạn có một website WordPress đẹp và chạy tốt trên mọi thiết bị."
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:184 template-parts/content.php:28
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Đọc tiếp<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #. translators: %s: Name of current post
 #: image.php:84 template-parts/content-page.php:37
 #: template-parts/content-search.php:28 template-parts/content-search.php:43
 #: template-parts/content-single.php:45 template-parts/content.php:49
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Sửa<span class=\"screen-reader-text\"> \"%s\"</span>"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:184 template-parts/content.php:28
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
-#: inc/customizer.php:246
+#: inc/customizer.php:283
 msgid "Red"
 msgstr "Màu đỏ"
 
@@ -38,7 +39,7 @@ msgstr "Màu đỏ"
 #: comments.php:31
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
-msgstr ""
+msgstr "Một bình luận về &ldquo;%s&rdquo;"
 
 #: searchform.php:16
 msgctxt "submit button"
@@ -50,20 +51,20 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Tìm kiếm &hellip;"
 
-#: searchform.php:13 searchform.php:14
+#: searchform.php:13
 msgctxt "label"
 msgid "Search for:"
 msgstr "Tìm kiếm:"
 
-#: footer.php:17
-msgid "Footer Primary Menu"
-msgstr ""
-
 #: footer.php:28
 msgid "Footer Social Links Menu"
-msgstr ""
+msgstr "Liên kết mạng xã hội"
 
-#: functions.php:144
+#: footer.php:17
+msgid "Footer Primary Menu"
+msgstr "Menu footer chính"
+
+#: functions.php:158
 msgid "Add widgets here to appear in your sidebar."
 msgstr "Thêm các widget tại đây để chúng hiển thị trên sidebar"
 
@@ -99,13 +100,13 @@ msgstr "Tác giả:"
 msgid "Previous post:"
 msgstr "Bài viết trước:"
 
-#: single.php:35
-msgid "Next post:"
-msgstr "Bài tiếp theo:"
-
 #: single.php:37
 msgid "Previous"
 msgstr "Trước"
+
+#: single.php:35
+msgid "Next post:"
+msgstr "Bài tiếp theo:"
 
 #: single.php:34
 msgid "Next"
@@ -135,64 +136,64 @@ msgctxt "Used before publish date."
 msgid "Posted on"
 msgstr "Đăng vào ngày"
 
-#: inc/template-tags.php:50
-msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "Để lại một lời bình <span class=\"screen-reader-text\"> ở %s</span>"
-
 #: inc/template-tags.php:38
 msgctxt "Used before post format."
 msgid "Format"
 msgstr "Loại bài viết"
+
+#: inc/template-tags.php:50
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Để lại một lời bình <span class=\"screen-reader-text\"> ở %s</span>"
 
 #: inc/template-tags.php:25
 msgctxt "Used before post author name."
 msgid "Author"
 msgstr "Tác giả"
 
-#: inc/customizer.php:256
+#: inc/customizer.php:293
 msgid "Yellow"
 msgstr "Màu vàng"
 
-#: inc/customizer.php:236
+#: inc/customizer.php:273
 msgid "Gray"
 msgstr "Màu xám"
 
-#: inc/customizer.php:226
+#: inc/customizer.php:263
 msgid "Dark"
 msgstr "Màu tối"
 
-#: inc/customizer.php:171
-msgid "Secondary Text Color"
-msgstr ""
+#: inc/customizer.php:172
+msgid "Main Text Color"
+msgstr "Màu chữ chính"
 
-#: inc/customizer.php:216
+#: inc/customizer.php:253
 msgid "Default"
 msgstr "Mặc định"
 
-#: inc/customizer.php:159
-msgid "Main Text Color"
-msgstr ""
+#: inc/customizer.php:184
+msgid "Secondary Text Color"
+msgstr "Màu chữ phụ"
 
-#: inc/customizer.php:132
-msgid "Page Background Color"
-msgstr ""
-
-#: inc/customizer.php:147
+#: inc/customizer.php:160
 msgid "Link Color"
 msgstr "Màu sắc liên kết"
 
-#: inc/customizer.php:117
-msgid "Base Color Scheme"
-msgstr "Bảng phối màu cơ bản"
-
-#: inc/back-compat.php:41 inc/back-compat.php:53 inc/back-compat.php:68
-msgid "Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again."
-msgstr ""
+#: inc/customizer.php:145
+msgid "Page Background Color"
+msgstr "Màu nền trang"
 
 #: image.php:102 single.php:29
 msgctxt "Parent post link"
 msgid "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">%title</span>"
 msgstr "<span class=\"meta-nav\">Được đăng trong</span><span class=\"post-title\">%title</span>"
+
+#: inc/back-compat.php:41 inc/back-compat.php:53 inc/back-compat.php:68
+msgid "Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again."
+msgstr "Giao diện Twenty Sixteen yêu cầu phiên bản WordPress 4.4 trở lên. Bạn đang sử dụng bản %s. Hãy cập nhật phiên bản WordPress của bạn và thử lại."
+
+#: inc/customizer.php:130
+msgid "Base Color Scheme"
+msgstr "Bảng phối màu cơ bản"
 
 #: image.php:73
 msgctxt "Used before full size attachment link."
@@ -212,7 +213,7 @@ msgstr "Ảnh sau"
 msgid "Previous Image"
 msgstr "Ảnh trước"
 
-#: header.php:45
+#: header.php:47
 msgid "Menu"
 msgstr "Menu"
 
@@ -220,59 +221,59 @@ msgstr "Menu"
 msgid "Skip to content"
 msgstr "Chuyển đến phần nội dung"
 
-#: functions.php:271
-msgid "collapse child menu"
-msgstr "đóng menu con"
-
-#: functions.php:270
+#: functions.php:284
 msgid "expand child menu"
 msgstr "mở rộng menu con"
 
-#. translators: If there are characters in your language that are not supported
-#. by Montserrat, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:194
-msgctxt "Montserrat font: on or off"
-msgid "on"
-msgstr ""
-
-#. translators: If there are characters in your language that are not supported
-#. by Merriweather, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:189
-msgctxt "Merriweather font: on or off"
-msgid "on"
-msgstr ""
-
-#: functions.php:162
-msgid "Content Bottom 2"
-msgstr ""
-
-#: functions.php:154 functions.php:164
-msgid "Appears at the bottom of the content on posts and pages."
-msgstr ""
-
-#: functions.php:152
-msgid "Content Bottom 1"
-msgstr ""
+#: functions.php:285
+msgid "collapse child menu"
+msgstr "đóng menu con"
 
 #. translators: If there are characters in your language that are not supported
 #. by Inconsolata, translate this to 'off'. Do not translate into your own
 #. language.
-#: functions.php:199
+#: functions.php:213
 msgctxt "Inconsolata font: on or off"
 msgid "on"
 msgstr "bật"
 
-#: functions.php:142
+#: functions.php:166
+msgid "Content Bottom 1"
+msgstr "Nội dung ở chân trang 1"
+
+#: functions.php:168 functions.php:178
+msgid "Appears at the bottom of the content on posts and pages."
+msgstr "Nội dung ở chân trang 1"
+
+#: functions.php:176
+msgid "Content Bottom 2"
+msgstr "Nội dung ở chân trang 2"
+
+#. translators: If there are characters in your language that are not supported
+#. by Merriweather, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:203
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "off"
+
+#. translators: If there are characters in your language that are not supported
+#. by Montserrat, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:208
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr "off"
+
+#: functions.php:156
 msgid "Sidebar"
 msgstr "Thanh bên"
 
-#: functions.php:78 header.php:60
+#: functions.php:89 header.php:62
 msgid "Social Links Menu"
 msgstr "Menu các đường dẫn mạng xã hội"
 
-#: functions.php:77 header.php:49
+#: functions.php:88 header.php:51
 msgid "Primary Menu"
 msgstr "Menu chính"
 
@@ -289,7 +290,7 @@ msgstr "Đã đóng bình luận."
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
+msgstr[0] "%1$s bình luận về &ldquo;%2$s&rdquo;"
 
 #: archive.php:51 image.php:60 index.php:48 search.php:39
 #: template-parts/content-page.php:27 template-parts/content-single.php:29
@@ -313,15 +314,15 @@ msgstr "Không thể tìm thấy dữ liệu cần thiết tại đây. Hãy th�
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oops! Không tìm thấy trang này."
 
+#. Theme URI of the plugin/theme
+msgid "https://wordpress.org/themes/twentysixteen/"
+msgstr "https://wordpress.org/themes/twentysixteen/"
+
 #. Author of the plugin/theme
 msgid "the WordPress team"
 msgstr "Nhóm Phát Triển WordPress"
 
-#. Theme URI of the plugin/theme
-msgid "https://wordpress.org/themes/twentysixteen/"
-msgstr ""
-
-#. #-#-#-#-#  twentysixteen.pot (Twenty Sixteen 1.1)  #-#-#-#-#
+#. #-#-#-#-#  twentysixteen.pot (Twenty Sixteen 1.3)  #-#-#-#-#
 #. Author URI of the plugin/theme
 #: footer.php:51
 msgid "https://wordpress.org/"

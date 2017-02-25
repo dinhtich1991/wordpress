@@ -18,7 +18,7 @@
 	if( !function_exists('tich_theme_setup') ){
 		function tich_theme_setup(){
 			/** Thiet lap textdomain  **/
-			$language_folder = THEME_URL . '/language';
+			$language_folder = THEME_URL . '/languages';
 			load_theme_textdomain('tich', $language_folder);
 
 			/** Tu dong them link RSS len <head> **/
@@ -234,9 +234,9 @@
 			<?php if(!is_page()) : ?>
 				<div class="entry-meta">
 					<?php
-						printf(__('<span class="author"> Posted by %1$s', 'tich'), get_the_author() );
-						printf(__('<span class="date-published"> at %1$s', 'tich'), get_the_date());
-						printf(__('<span class="category"> in %1$s ', 'tich'), get_the_category_list(','));
+						printf(__('<span class="author"> Posted by %1$s </span>', 'tich'), get_the_author() );
+						printf(__('<span class="date-published"> at %1$s </span>', 'tich'), get_the_date());
+						printf(__('<span class="category"> in %1$s </span>', 'tich'), get_the_category_list(','));
 						if(comments_open()):
 							echo '<span class="meta-reply">';
 							comments_popup_link(
